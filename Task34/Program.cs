@@ -39,7 +39,7 @@ int EvenNumbers(int[] array)
     return count;
 }
 
-int[] arr = CreateArrayRndInt(10, 0, 999);
+int[] arr = CreateArrayRndInt(10, 100, 999);
 PrintArray(arr);
 int result = EvenNumbers(arr);
 Console.WriteLine();
