@@ -5,7 +5,9 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
-int[,] CreateMatrixRndInt (int rows, int columns, int min, int max) //Метод доя заполнения двумерного массива.
+
+//Метод для заполнения двумерного массива.
+int[,] CreateMatrixRndInt (int rows, int columns, int min, int max) 
 {
     int[,] matrix = new int[rows, columns];
 
@@ -19,7 +21,7 @@ int[,] CreateMatrixRndInt (int rows, int columns, int min, int max) //Метод
     }
     return matrix;
 }
-
+//Печать двумерного массива вывод в консоль
 void PrintMatrix (int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -27,12 +29,12 @@ void PrintMatrix (int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 5} ");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 5} "); //5} - это отступ в выводе на экран массива. Отступ между числами. 
             else Console.Write($"{matrix[i, j], 5} ");
         }
         Console.WriteLine("|");     //Эту строку добавляем чтобы программа вывела числа не в одну строчку, а с переводом на следующую строку.
     }
 }
-
+//Вызов методов
 int[,] array2D = CreateMatrixRndInt(3, 4, -99, 99); //array2D - название переменной для вывода. Параметры вывода массива - что вывести на экран - строки, столбцы, числа в нем от -99 до 99
 PrintMatrix(array2D);
